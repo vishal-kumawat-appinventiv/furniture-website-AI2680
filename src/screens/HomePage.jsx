@@ -15,13 +15,72 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 5,
+    items: 4,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 3,
+    items: 2,
   },
 };
+
+const CarouselImages = [
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-001.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-003.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-004.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-005.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-006.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-007.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-001.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-003.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-004.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-005.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-006.png",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-007.png",
+  },
+];
 
 const HomePage = () => {
   return (
@@ -44,7 +103,7 @@ const HomePage = () => {
           <Navbar />
         </div>
 
-        <div className="relative z-10 mt-[40vh] lg:mt-[93vh] mb-5">
+        <div className="relative z-10 mt-[42vh] lg:mt-[93vh] mb-5">
           <Carousel
             showDots={true}
             arrows={false}
@@ -52,72 +111,19 @@ const HomePage = () => {
             draggable={false}
             autoPlay={true}
           >
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5 mb-8"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
-            <img
-              src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-002.png"
-              alt="img"
-              className="border-2 border-gray-300 mx-5"
-            />
+            {CarouselImages.map((i, idx) => {
+              return (
+                <img
+                  key={idx}
+                  src={i?.image}
+                  alt="img"
+                  className="border-2 border-gray-300 mb-8 mx-4"
+                />
+              );
+            })}
           </Carousel>
         </div>
         <div>
-          <h1>efnrjbdvjrwe</h1>
-          <h1>efnrjbdvjrwe</h1>
-          <h1>efnrjbdvjrwe</h1>
           <h1>efnrjbdvjrwe</h1>
         </div>
       </div>
