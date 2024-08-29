@@ -30,13 +30,13 @@ const categoryImages = [
 const Category = () => {
   return (
     <>
-      <div className="w-full text-center mt-10">
+      <div className="w-full text-center mt-20">
         <p className="text-gray-600">Shop by category</p>
         <h1 className="text-3xl lg:text-5xl font-bold mt-2 mb-10">
           Shop by category
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
         {categoryImages.map((category, index) => (
           <div key={index} className="card relative">
             <img
