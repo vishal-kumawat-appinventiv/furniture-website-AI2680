@@ -38,12 +38,15 @@ const Featured = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
         {featured.map((product, index) => (
-          <div key={index} className="card flex flex-col">
+          <div key={index} className="relative card flex flex-col">
             <img
               src={product.image}
               alt={`featured-${index}`}
               className="h-full w-full"
             />
+            <div className="absolute top-3 left-3 p-2 rounded-2xl bg-white text-gray-700 text-sm shadow-lg">
+              SALE!
+            </div>
             <div className="text-center bg-[#f1f3f2] pb-3">
               <h3 className="font-bold">PRODUCT NAME</h3>
               <p>$85.00 - $99.00</p>
