@@ -110,6 +110,7 @@ const HomePage = () => {
             responsive={responsive}
             draggable={false}
             autoPlay={true}
+            itemClass="mx-2"
           >
             {CarouselImages.map((i, idx) => {
               return (
@@ -117,7 +118,7 @@ const HomePage = () => {
                   key={idx}
                   src={i?.image}
                   alt="img"
-                  className="border-2 border-gray-300 mb-8 mx-4"
+                  className="border-2 border-gray-300 mb-8"
                 />
               );
             })}
