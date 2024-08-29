@@ -1,4 +1,4 @@
-import { Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart } from "lucide-react";
 import React from "react";
 
 const Navbar = () => {
@@ -9,10 +9,10 @@ const Navbar = () => {
           <img
             src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-regular.png"
             alt="main-logo"
-            className="md:mr-36"
+            className="md:mr-44"
           />
         </div>
-        <div className="flex gap-4">
+        <div className="hidden lg:flex gap-4">
           <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
             SHOP ALL
           </p>
@@ -29,10 +29,10 @@ const Navbar = () => {
             BEDROOM
           </p>
           <p>
-            <Search />
+            <Search size={"20"} />
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="hidden lg:flex gap-4">
           <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
             STORY
           </p>
@@ -49,9 +49,12 @@ const Navbar = () => {
             Log In
           </p>
           <p>
-            <ShoppingCart />
+            <ShoppingCart size={"20"} />
           </p>
         </div>
+        <p className="lg:hidden">
+          <Menu />
+        </p>
       </div>
     </>
   );
