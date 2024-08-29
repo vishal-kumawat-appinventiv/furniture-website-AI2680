@@ -23,6 +23,13 @@ const HomePage = () => {
           <Navbar />
         </div>
 
+        <div className="relative z-10 mt-[40vh] lg:mt-[90vh]">
+          <h1 className="text-3xl">Heloo</h1>
+          <h1 className="text-3xl">Heloo</h1>
+          <h1 className="text-3xl">Heloo</h1>
+          <h1 className="text-3xl">Heloo</h1>
+          <h1 className="text-3xl">Heloo</h1>
+        </div>
       </div>
     </>
   );
