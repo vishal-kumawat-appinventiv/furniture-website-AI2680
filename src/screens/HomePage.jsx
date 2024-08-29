@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import AboveImg from "../components/AboveImg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Category from "../components/Category";
 
 const responsive = {
   superLargeDesktop: {
@@ -127,16 +128,18 @@ const HomePage = () => {
           </div>
 
           <div className="p-4">
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
-            <h1>efnrjbdvjrwe</h1>
+            <Category />
+          </div>
+
+          <div>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
+            <h1>gfbujaksagfuiesg</h1>
           </div>
         </div>
       </div>
