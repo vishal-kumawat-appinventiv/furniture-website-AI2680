@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Category from "../components/Category";
 import Featured from "../components/Featured";
+import Footer from "../components/Footer";
 
 const responsive = {
   superLargeDesktop: {
@@ -137,16 +138,7 @@ const HomePage = () => {
           </div>
 
           <div className="mt-10">
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
-            <h1>bdsjvkbfjvbkj</h1>
+            <Footer />
           </div>
         </div>
       </div>
