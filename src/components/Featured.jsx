@@ -51,7 +51,7 @@ const Featured = () => {
             <img
               src={product.image}
               alt={`featured-${index}`}
-              className={`h-full w-full ${
+              className={`h-full w-full transition-transform duration-500 ${
                 onCategoryRoute === true && "hover:scale-110"
               }`}
             />
