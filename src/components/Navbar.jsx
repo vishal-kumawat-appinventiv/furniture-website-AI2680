@@ -9,7 +9,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between p-5 w-full">
+      <div
+        className={`flex items-center justify-between p-5 w-full ${
+          navLink && "border-b-2 border-gray-200"
+        }`}
+      >
         <div>
           <img
             src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-regular.png"
@@ -23,6 +27,7 @@ const Navbar = () => {
             SHOP ALL
           </p>
           <p
+            onClick={() => navigate("/product-category/decor")}
             className={`${
               navLink === "decor" && "text-amber-900"
             } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
@@ -30,6 +35,7 @@ const Navbar = () => {
             DECOR
           </p>
           <p
+            onClick={() => navigate("/product-category/office")}
             className={`${
               navLink === "office" && "text-amber-900"
             } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
@@ -37,6 +43,7 @@ const Navbar = () => {
             OFFICE
           </p>
           <p
+            onClick={() => navigate("/product-category/living-room")}
             className={`${
               navLink === "living-room" && "text-amber-900"
             } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
@@ -44,6 +51,7 @@ const Navbar = () => {
             LIVING ROOM
           </p>
           <p
+            onClick={() => navigate("/product-category/bedroom")}
             className={`${
               navLink === "bedroom" && "text-amber-900"
             } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
