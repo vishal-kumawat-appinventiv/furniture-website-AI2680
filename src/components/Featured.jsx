@@ -52,7 +52,7 @@ const Featured = () => {
               src={product.image}
               alt={`featured-${index}`}
               className={`h-full w-full transition-transform duration-500 ${
-                onCategoryRoute === true && "hover:scale-110"
+                onCategoryRoute === true && "hover:scale-105"
               }`}
             />
             <div className="absolute top-3 left-3 p-2 rounded-2xl bg-white text-gray-700 text-sm shadow-lg">
