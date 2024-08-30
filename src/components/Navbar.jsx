@@ -1,7 +1,12 @@
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navLink = location?.pathname.split("/").pop();
+
   return (
     <>
       <div className="flex items-center justify-between p-5 w-full">
@@ -9,23 +14,40 @@ const Navbar = () => {
           <img
             src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/logo-regular.png"
             alt="main-logo"
-            className="md:mr-44"
+            className="md:mr-44 cursor-pointer"
+            onClick={() => navigate("/")}
           />
         </div>
         <div className="hidden lg:flex gap-4">
           <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
             SHOP ALL
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            className={`${
+              navLink === "decor" && "text-amber-900"
+            } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
+          >
             DECOR
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            className={`${
+              navLink === "office" && "text-amber-900"
+            } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
+          >
             OFFICE
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            className={`${
+              navLink === "living-room" && "text-amber-900"
+            } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
+          >
             LIVING ROOM
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            className={`${
+              navLink === "bedroom" && "text-amber-900"
+            } text-sm cursor-pointer hover:text-amber-900 hover:scale-110`}
+          >
             BEDROOM
           </p>
           <p>
