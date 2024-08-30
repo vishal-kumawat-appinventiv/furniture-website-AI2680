@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const categoryImages = [
   {
@@ -28,6 +29,8 @@ const categoryImages = [
 ];
 
 const Category = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="w-full text-center mt-20">
@@ -38,7 +41,17 @@ const Category = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
         {categoryImages.map((category, index) => (
-          <div key={index} className="card relative">
+          <div
+            key={index}
+            className="card relative"
+            onClick={() =>
+              navigate(
+                `/product-category/${category?.title
+                  .toLocaleLowerCase()
+                  .replace(/\s+/g, "-")}`
+              )
+            }
+          >
             <img
               src={category.image}
               alt={category.title}
