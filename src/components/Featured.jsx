@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const featured = [
   {
@@ -28,21 +29,31 @@ const featured = [
 ];
 
 const Featured = () => {
+  const location = useLocation();
+  const onCategoryRoute = location?.pathname?.startsWith("/product-category");
+
   return (
     <>
-      <div className="w-full text-center">
-        <p className="text-gray-600">Shop by category</p>
-        <h1 className="text-3xl lg:text-5xl font-bold mt-2 mb-10">
-          Featured products
-        </h1>
-      </div>
+      {!onCategoryRoute && (
+        <div className="w-full text-center">
+          <p className="text-gray-600">Shop by category</p>
+          <h1 className="text-3xl lg:text-5xl font-bold mt-2 mb-10">
+            Featured products
+          </h1>
+        </div>
+      )}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
         {featured.map((product, index) => (
-          <div key={index} className="relative card flex flex-col">
+          <div
+            key={index}
+            className="relative card flex flex-col overflow-hidden"
+          >
             <img
               src={product.image}
               alt={`featured-${index}`}
-              className="h-full w-full"
+              className={`h-full w-full ${
+                onCategoryRoute === true && "hover:scale-110"
+              }`}
             />
             <div className="absolute top-3 left-3 p-2 rounded-2xl bg-white text-gray-700 text-sm shadow-lg">
               SALE!
