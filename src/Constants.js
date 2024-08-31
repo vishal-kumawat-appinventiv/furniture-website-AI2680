@@ -87,3 +87,40 @@ export const categoryImages = [
     products: "11 PRODUCTS",
   },
 ];
+
+export const relatedProd = [
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-03-a.jpg",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-06-b.jpg",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-16-a.jpg",
+  },
+  {
+    image:
+      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-05-b.jpg",
+  },
+];
+
+export const prodPageImages = [
+  "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-a.jpg",
+  "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-b.jpg",
+  "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-b.jpg",
+];
+
+export const shippingDetails = [
+  {
+    condition: "No-Risk Money Back Guarantee!",
+  },
+  {
+    condition: "No Hassle Refunds",
+  },
+  {
+    condition: "Secure Payments",
+  },
+];

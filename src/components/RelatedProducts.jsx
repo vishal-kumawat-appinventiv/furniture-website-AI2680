@@ -1,24 +1,6 @@
 import React from "react";
 import SaleTag from "./SaleTag";
-
-const relatedProd = [
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-03-a.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-06-b.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-16-a.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-05-b.jpg",
-  },
-];
+import { relatedProd } from "../Constants";
 
 const RelatedProducts = () => {
   return (

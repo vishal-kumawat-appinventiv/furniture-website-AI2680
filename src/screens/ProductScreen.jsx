@@ -5,23 +5,7 @@ import ColorSwitch from "../components/ColorSwitch";
 import { useState } from "react";
 import SaleTag from "../components/SaleTag";
 import RelatedProducts from "../components/RelatedProducts";
-
-const images = [
-  "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-a.jpg",
-  "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-b.jpg",
-];
-
-const shippingDetails = [
-  {
-    condition: "No-Risk Money Back Guarantee!",
-  },
-  {
-    condition: "No Hassle Refunds",
-  },
-  {
-    condition: "Secure Payments",
-  },
-];
+import { prodPageImages, shippingDetails } from "../Constants";
 
 const ProductScreen = () => {
   const [count, setCount] = useState(1);
@@ -33,12 +17,12 @@ const ProductScreen = () => {
         <div className="mainGrid grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
           <div className="productImage">
             <div className="relative">
-              <img src={images[0]} alt="main-image" className="mb-4" />
+              <img src={prodPageImages[0]} alt="main-image" className="mb-4" />
               <SaleTag />
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src={images[1]} alt="bottom-img" />
-              <img src={images[1]} alt="bottom-img" />
+              <img src={prodPageImages[1]} alt="bottom-img" />
+              <img src={prodPageImages[2]} alt="bottom-img" />
             </div>
           </div>
           <div className="relative">
