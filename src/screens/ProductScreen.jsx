@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import ColorSwitch from "../components/ColorSwitch";
 import { useState } from "react";
 import SaleTag from "../components/SaleTag";
+import RelatedProducts from "../components/RelatedProducts";
 
 const images = [
   "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-a.jpg",
@@ -166,6 +167,7 @@ const ProductScreen = () => {
             </div>
           </div>
         </div>
+        <RelatedProducts />
       </div>
       <Footer />
     </>
