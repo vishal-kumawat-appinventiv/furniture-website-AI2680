@@ -88,6 +88,11 @@ const ProductScreen = () => {
                 </button>
               </div>
             </div>
+            <div className="text-sm">
+              <span className="mr-2">SKU: N/A </span>Categories:{" "}
+              <span className="text-[#e9c09b]">Bedroom, Decor, Office</span>
+            </div>
+            
           </div>
         </div>
       </div>
