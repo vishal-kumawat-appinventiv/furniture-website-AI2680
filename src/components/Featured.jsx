@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { featured } from "../Constants";
 import { Link } from "react-router-dom";
+import ColorSwitch from "./ColorSwitch";
 
 const Featured = () => {
   const location = useLocation();
@@ -48,11 +49,7 @@ const Featured = () => {
                 <h3 className="font-bold">PRODUCT NAME</h3>
               </Link>
               <p>$85.00 - $99.00</p>
-              <div className="flex gap-2 items-center justify-center">
-                <p className="bg-black rounded-full p-2 w-2 border-white border-2"></p>
-                <p className="bg-[#8f6453] rounded-full p-2 w-2 border-white border-2"></p>
-                <p className="bg-[#dabca2] rounded-full p-2 w-2 border-white border-2"></p>
-              </div>
+              <ColorSwitch />
             </div>
           </div>
         ))}
