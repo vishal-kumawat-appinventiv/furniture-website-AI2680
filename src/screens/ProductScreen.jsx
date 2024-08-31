@@ -21,7 +21,9 @@ const ProductScreen = () => {
           </div>
           <div className="productDesc flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <p className="text-gray-600 text-sm">Home / Bedroom / Product Name 1</p>
+              <p className="text-gray-600 text-sm">
+                Home / Bedroom / Product Name 1
+              </p>
               <div>
                 <button className=" border-2 border-gray-400 mr-2">
                   <ChevronLeft />
@@ -67,12 +69,14 @@ const ProductScreen = () => {
             <div className="border-t-2 border-gray-100 border-b-2">
               <div className="counter flex items-center mt-3 mb-3">
                 <button
-                  className="px-3 py-1 border-2 border-gray-100"
+                  className="px-3 py-1 border-2 border-gray-200"
                   onClick={() => count > 1 && setCount(count - 1)}
                 >
                   -
                 </button>
-                <p className="px-3 py-1 border-2 border-gray-200">{count}</p>
+                <p className="px-3 py-1 border-t-2 border-b-2 border-l-0 border-r-0 border-gray-200">
+                  {count}
+                </p>
                 <button
                   className="px-3 py-1 border-2 border-gray-200"
                   onClick={() => setCount(count + 1)}
