@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ColorSwitch from "../components/ColorSwitch";
 import { useState } from "react";
+import SaleTag from "../components/SaleTag";
 
 const images = [
   "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-a.jpg",
@@ -30,7 +31,10 @@ const ProductScreen = () => {
       <div className="max-w-7xl mx-auto p-4">
         <div className="mainGrid grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
           <div className="productImage">
-            <img src={images[0]} alt="main-image" className="mb-4" />
+            <div className="relative">
+              <img src={images[0]} alt="main-image" className="mb-4" />
+              <SaleTag />
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <img src={images[1]} alt="bottom-img" />
               <img src={images[1]} alt="bottom-img" />

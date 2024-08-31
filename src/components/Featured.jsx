@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { featured } from "../Constants";
 import { Link } from "react-router-dom";
 import ColorSwitch from "./ColorSwitch";
+import SaleTag from "./SaleTag";
 
 const Featured = () => {
   const location = useLocation();
@@ -37,9 +38,7 @@ const Featured = () => {
                 }`}
               />
             </Link>
-            <div className="absolute top-3 left-3 p-2 rounded-2xl bg-white text-gray-700 text-sm shadow-lg">
-              SALE!
-            </div>
+            <SaleTag />
             <div className="text-center bg-[#f1f3f2] pb-3">
               <Link
                 to={`/product/${product?.name
