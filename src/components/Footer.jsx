@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import React from "react";
+import { footerCategories, footerLinks } from "../Constants";
 
 const Footer = () => {
   return (
@@ -12,17 +13,19 @@ const Footer = () => {
           />
           <div className="links flex flex-col gap-2">
             <h4 className="font-bold text-2xl">Links</h4>
-            <p className="text-[#c69a83] hover:text-black">Story</p>
-            <p className="text-[#c69a83] hover:text-black">Contact</p>
-            <p className="text-[#c69a83] hover:text-black">Track Order</p>
-            <p className="text-[#c69a83] hover:text-black">Help</p>
+            {footerLinks.map((link, index) => (
+              <p key={index} className="text-[#c69a83] hover:text-black">
+                {link.href}
+              </p>
+            ))}
           </div>
           <div className="categories flex flex-col gap-2">
             <h4 className="font-bold text-2xl">CATEGORIES</h4>
-            <p className="text-[#c69a83] hover:text-black">Bedroom (6)</p>
-            <p className="text-[#c69a83] hover:text-black">Decor (9)</p>
-            <p className="text-[#c69a83] hover:text-black">Living Room (6)</p>
-            <p className="text-[#c69a83] hover:text-black">Office (11)</p>
+            {footerCategories.map((category, index) => (
+              <p key={index} className="text-[#c69a83] hover:text-black">
+                {category.category}
+              </p>
+            ))}
           </div>
           <div className="Subscribe flex flex-col gap-2">
             <h4 className="font-bold text-2xl">Subscribe</h4>

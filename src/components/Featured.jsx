@@ -1,32 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-
-const featured = [
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-09-a-400x488.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-05-b-400x488.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-01-c-400x488.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-15-b-400x488.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-c-400x488.jpg",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-14-a-400x488.jpg",
-  },
-];
+import { featured } from "../Constants";
 
 const Featured = () => {
   const location = useLocation();

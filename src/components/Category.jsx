@@ -1,32 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const categoryImages = [
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-1-300x300.jpg",
-    title: "BEDROOM",
-    products: "6 PRODUCTS",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-4-300x300.jpg",
-    title: "DECOR",
-    products: "9 PRODUCTS",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-3-300x300.jpg",
-    title: "LIVING ROOM",
-    products: "6 PRODUCTS",
-  },
-  {
-    image:
-      "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-2-300x300.jpg",
-    title: "OFFICE",
-    products: "11 PRODUCTS",
-  },
-];
+import { categoryImages } from "../Constants";
 
 const Category = () => {
   const navigate = useNavigate();
