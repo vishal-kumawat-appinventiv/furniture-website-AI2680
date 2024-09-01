@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import ColorSwitch from "../components/ColorSwitch";
 import { useState } from "react";
 import SaleTag from "../components/SaleTag";
+import ImageZoomIcon from "../components/ImageZoomIcon";
 import RelatedProducts from "../components/RelatedProducts";
 import { prodPageImages, shippingDetails } from "../Constants";
 
@@ -19,6 +20,7 @@ const ProductScreen = () => {
             <div className="relative">
               <img src={prodPageImages[0]} alt="main-image" className="mb-4" />
               <SaleTag />
+              <ImageZoomIcon />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img src={prodPageImages[1]} alt="bottom-img" />
