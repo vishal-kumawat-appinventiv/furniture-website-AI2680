@@ -5,10 +5,12 @@ import ColorSwitch from "../components/ColorSwitch";
 import SaleTag from "../components/SaleTag";
 import ImageZoomIcon from "../components/ImageZoomIcon";
 import RelatedProducts from "../components/RelatedProducts";
-import { prodPageImages, shippingDetails } from "../Constants";
+import { prodPageImages } from "../Constants";
 import SelectOption from "../components/SelectOptions";
 import Counter from "../components/Counter";
 import VisaArray from "../components/VisaArray";
+import ProductShippingDetails from "../components/ProductShippingDetails";
+import toast from "react-hot-toast";
 
 const ProductScreen = () => {
   return (
@@ -35,10 +37,16 @@ const ProductScreen = () => {
                   Home / Bedroom / Product Name 1
                 </p>
                 <div>
-                  <button className=" border-2 border-gray-400 mr-2">
+                  <button
+                    onClick={() => toast("Yet to Build!")}
+                    className=" border-2 border-gray-400 mr-2"
+                  >
                     <ChevronLeft />
                   </button>
-                  <button className=" border-2 border-gray-400">
+                  <button
+                    onClick={() => toast("Yet to Build!")}
+                    className=" border-2 border-gray-400"
+                  >
                     <ChevronRight />
                   </button>
                 </div>
@@ -79,7 +87,10 @@ const ProductScreen = () => {
               <div className="border-t-2 border-gray-100 border-b-2">
                 <div className="counter flex items-center mt-3 mb-3">
                   <Counter />
-                  <button className="ml-2 bg-[#7f7f7f] px-3 py-2 text-sm text-white hover:bg-[#c19a83]">
+                  <button
+                    onClick={() => toast("Yet to Build!")}
+                    className="ml-2 bg-[#7f7f7f] px-3 py-2 text-sm text-white hover:bg-[#c19a83]"
+                  >
                     ADD TO CART
                   </button>
                 </div>
@@ -103,18 +114,7 @@ const ProductScreen = () => {
                   Free shipping on orders over $50!
                 </p>
               </div>
-              {shippingDetails.map((ele, index) => (
-                <div className="flex gap-2" key={index}>
-                  <svg
-                    className="w-5 h-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
-                  </svg>
-                  <p className="text-gray-600">{ele?.condition}</p>
-                </div>
-              ))}
+              <ProductShippingDetails />
             </div>
           </div>
         </div>

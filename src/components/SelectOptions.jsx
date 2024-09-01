@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { prodPageImages } from "../Constants";
+import toast from "react-hot-toast";
 
 const SelectOptions = () => {
   const [showSelectOptions, setShowSelectOptions] = useState(false);
@@ -38,7 +39,7 @@ const SelectOptions = () => {
           </div>
           <div className="flex items-center gap-3">
             <p className="font-bold">$85.00 - $99.00</p>
-            <button className="text-white py-2 px-2 bg-black hover:bg-[#c29b84]">
+            <button onClick={() => toast("Yet to Build!")} className="text-white py-2 px-2 bg-black hover:bg-[#c29b84]">
               SELECT OPTIONS
             </button>
           </div>
