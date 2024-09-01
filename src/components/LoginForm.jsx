@@ -1,0 +1,32 @@
+import React from "react";
+
+const LoginForm = () => {
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center p-10 border-2 border-gray-200 max-w-[550px] w-full">
+        <h1 className="text-5xl font-bold mb-16">Login</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username or email*"
+          className="border-2 border-gray-200 rounded p-2 w-full mb-6 outline-none"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password*"
+          className="border-2 border-gray-200 rounded p-2 w-full mb-6 outline-none"
+        />
+        <div className="flex w-full mb-6">
+          <input type="radio" name="remember" />
+        </div>
+        <button className="text-white w-full p-3 bg-black mb-6 hover:bg-[#c19a83]">
+          LOG IN
+        </button>
+        <p className="text-sm text-[#c19a83]">Lost your password?</p>
+      </div>
+    </>
+  );
+};
+
+export default LoginForm;

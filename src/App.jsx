@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./screens/HomePage";
 import ProductCategory from "./screens/ProductCategory";
 import ProductScreen from "./screens/ProductScreen";
+import OrderScreen from "./screens/OrderScreen";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/orders" element={<OrderScreen />} />
           <Route
             path="/product-category/:prodName"
             element={<ProductCategory />}
