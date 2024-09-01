@@ -4,11 +4,13 @@ import HomePage from "./screens/HomePage";
 import ProductCategory from "./screens/ProductCategory";
 import ProductScreen from "./screens/ProductScreen";
 import OrderScreen from "./screens/OrderScreen";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <Toaster />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/orders" element={<OrderScreen />} />

@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import React from "react";
 import { footerCategories, footerLinks } from "../Constants";
+import toast from "react-hot-toast";
 
 const Footer = () => {
   return (
@@ -14,7 +15,11 @@ const Footer = () => {
           <div className="links flex flex-col gap-2">
             <h4 className="font-bold text-2xl">Links</h4>
             {footerLinks.map((link, index) => (
-              <p key={index} className="text-[#c69a83] hover:text-black">
+              <p
+                key={index}
+                className="text-[#c69a83] hover:text-black"
+                onClick={() => toast("Yet to Build !")}
+              >
                 {link.href}
               </p>
             ))}
@@ -22,7 +27,7 @@ const Footer = () => {
           <div className="categories flex flex-col gap-2">
             <h4 className="font-bold text-2xl">CATEGORIES</h4>
             {footerCategories.map((category, index) => (
-              <p key={index} className="text-[#c69a83] hover:text-black">
+              <p  key={index} className="text-[#c69a83] hover:text-black">
                 {category.category}
               </p>
             ))}
@@ -46,10 +51,10 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto flex flex-col gap-5 sm:flex-row items-center justify-between p-10">
           <p>Copyright © 2024 Furniture Shop | Powered by Furniture Shop</p>
           <div className="flex gap-2">
-            <Facebook />
-            <Youtube />
-            <Instagram />
-            <Twitter />
+            <Facebook onClick={() => toast("Yet to Build !")} />
+            <Youtube onClick={() => toast("Yet to Build !")} />
+            <Instagram onClick={() => toast("Yet to Build !")} />
+            <Twitter onClick={() => toast("Yet to Build !")} />
           </div>
         </div>
       </div>

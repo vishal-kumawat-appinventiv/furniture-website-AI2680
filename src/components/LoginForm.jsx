@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const [loginInfo, setLoginInfo] = useState({
@@ -18,6 +19,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login Info:", loginInfo);
+    toast("Yet to Build !");
   };
 
   return (

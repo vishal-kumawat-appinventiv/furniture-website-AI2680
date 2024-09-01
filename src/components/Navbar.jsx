@@ -1,5 +1,6 @@
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import React from "react";
+import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -23,7 +24,10 @@ const Navbar = () => {
           />
         </div>
         <div className="hidden lg:flex gap-4">
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            onClick={() => toast("Yet to Build !")}
+            className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110"
+          >
             SHOP ALL
           </p>
           <p
@@ -58,15 +62,21 @@ const Navbar = () => {
           >
             BEDROOM
           </p>
-          <p>
+          <p onClick={() => toast("Yet to Build !")}>
             <Search size={"20"} />
           </p>
         </div>
         <div className="hidden lg:flex gap-4">
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            onClick={() => toast("Yet to Build !")}
+            className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110"
+          >
             STORY
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            onClick={() => toast("Yet to Build !")}
+            className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110"
+          >
             CONTACT
           </p>
           <Link to={"/orders"}>
@@ -74,13 +84,19 @@ const Navbar = () => {
               TRACK ORDER
             </p>
           </Link>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            onClick={() => toast("Yet to Build !")}
+            className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110"
+          >
             HELP
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+          <p
+            onClick={() => toast("Yet to Build !")}
+            className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110"
+          >
             Log In
           </p>
-          <p>
+          <p onClick={() => toast("Yet to Build !")}>
             <ShoppingCart size={"20"} />
           </p>
         </div>
