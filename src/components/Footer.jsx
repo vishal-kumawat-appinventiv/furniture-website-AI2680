@@ -2,6 +2,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import React from "react";
 import { footerCategories, footerLinks } from "../Constants";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -27,9 +28,15 @@ const Footer = () => {
           <div className="categories flex flex-col gap-2">
             <h4 className="font-bold text-2xl">CATEGORIES</h4>
             {footerCategories.map((category, index) => (
-              <p  key={index} className="text-[#c69a83] hover:text-black">
-                {category.category}
-              </p>
+              <Link
+                to={`/product/${category?.category
+                  .toLocaleLowerCase()
+                  .replace(/\s+/g, "-")}`}
+              >
+                <p key={index} className="text-[#c69a83] hover:text-black">
+                  {category.category}
+                </p>
+              </Link>
             ))}
           </div>
           <div className="Subscribe flex flex-col gap-2">
