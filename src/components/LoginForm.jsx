@@ -17,8 +17,11 @@ const LoginForm = () => {
           placeholder="Password*"
           className="border-2 border-gray-200 rounded p-2 w-full mb-6 outline-none"
         />
-        <div className="flex w-full mb-6">
-          <input type="radio" name="remember" />
+        <div className="flex items-center w-full mb-6">
+          <input type="checkbox" name="remember" className="mr-2" />
+          <label htmlFor="remember" className="text-gray-700">
+            Remember me
+          </label>
         </div>
         <button className="text-white w-full p-3 bg-black mb-6 hover:bg-[#c19a83]">
           LOG IN
