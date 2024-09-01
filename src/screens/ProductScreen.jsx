@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ColorSwitch from "../components/ColorSwitch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SaleTag from "../components/SaleTag";
 import ImageZoomIcon from "../components/ImageZoomIcon";
 import RelatedProducts from "../components/RelatedProducts";
@@ -11,9 +11,49 @@ import { prodPageImages, shippingDetails } from "../Constants";
 const ProductScreen = () => {
   const [count, setCount] = useState(1);
 
+  const [showSelectOptions, setShowSelectOptions] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.32) {
+        setShowSelectOptions(true);
+      } else {
+        setShowSelectOptions(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
+      <div
+        className={`selectOptions z-30 w-full bg-white shadow-2xl shadow-black flex items-center justify-between p-3 fixed bottom-0 left-0 right-0 transition-transform duration-300 ${
+          showSelectOptions ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div className="w-full max-w-7xl flex mx-auto items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img
+              src={prodPageImages[0]}
+              alt="img"
+              className="w-8 h-10 object-cover"
+            />
+            <h3 className="text-gray-600 font-bold">Product Name 10</h3>
+          </div>
+          <div className="flex items-center gap-3">
+            <p className="font-bold">$85.00 - $99.00</p>
+            <button className="text-white py-2 px-2 bg-black hover:bg-[#c29b84]">
+              SELECT OPTIONS
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto p-4">
         <div className="mainGrid grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
           <div className="productImage">
