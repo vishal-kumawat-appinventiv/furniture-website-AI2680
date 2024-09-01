@@ -1,6 +1,6 @@
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -69,9 +69,11 @@ const Navbar = () => {
           <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
             CONTACT
           </p>
-          <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
-            TRACK ORDER
-          </p>
+          <Link to={"/orders"}>
+            <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
+              TRACK ORDER
+            </p>
+          </Link>
           <p className="text-sm cursor-pointer hover:text-amber-900 hover:scale-110">
             HELP
           </p>
