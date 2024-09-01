@@ -32,8 +32,9 @@ const Footer = () => {
                 to={`/product/${category?.category
                   .toLocaleLowerCase()
                   .replace(/\s+/g, "-")}`}
+                key={index}
               >
-                <p key={index} className="text-[#c69a83] hover:text-black">
+                <p className="text-[#c69a83] hover:text-black">
                   {category.category}
                 </p>
               </Link>

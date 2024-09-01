@@ -2,16 +2,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ColorSwitch from "../components/ColorSwitch";
-import { useState } from "react";
 import SaleTag from "../components/SaleTag";
 import ImageZoomIcon from "../components/ImageZoomIcon";
 import RelatedProducts from "../components/RelatedProducts";
 import { prodPageImages, shippingDetails } from "../Constants";
 import SelectOption from "../components/SelectOptions";
+import Counter from "../components/Counter";
 
 const ProductScreen = () => {
-  const [count, setCount] = useState(1);
-
   return (
     <>
       <Navbar />
@@ -79,21 +77,7 @@ const ProductScreen = () => {
               </div>
               <div className="border-t-2 border-gray-100 border-b-2">
                 <div className="counter flex items-center mt-3 mb-3">
-                  <button
-                    className="px-3 py-1 border-2 border-gray-200 hover:bg-[#c19a83]"
-                    onClick={() => count > 1 && setCount(count - 1)}
-                  >
-                    -
-                  </button>
-                  <p className="px-3 py-1 border-t-2 border-b-2 border-l-0 border-r-0 border-gray-200">
-                    {count}
-                  </p>
-                  <button
-                    className="px-3 py-1 border-2 border-gray-200 hover:bg-[#c19a83]"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    +
-                  </button>
+                  <Counter />
                   <button className="ml-2 bg-[#7f7f7f] px-3 py-2 text-sm text-white hover:bg-[#c19a83]">
                     ADD TO CART
                   </button>
